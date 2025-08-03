@@ -3,23 +3,23 @@ plugins {
 }
 
 android {
-    Properties properties = new Properties()
-    InputStream inputStream = project.rootProject.file('keystore.properties').newDataInputStream()
-    properties.load(inputStream)
+    //Properties properties = new Properties()
+    //InputStream inputStream = project.rootProject.file('keystore.properties').newDataInputStream()
+    //properties.load(inputStream)
 
-    def keyKeyStoreFile = file(properties.getProperty('keyStoreFile'))
-    def keyKeyStorePassword = properties.getProperty('keyStorePassword')
-    def keyKeyAlias = properties.getProperty('keyAlias')
-    def keyKeyAliasPassword = properties.getProperty('keyAliasPassword')
+    //def keyKeyStoreFile = file(properties.getProperty('keyStoreFile'))
+    //def keyKeyStorePassword = properties.getProperty('keyStorePassword')
+    //def keyKeyAlias = properties.getProperty('keyAlias')
+    //def keyKeyAliasPassword = properties.getProperty('keyAliasPassword')
 
-    signingConfigs {
-        debug {
-            storeFile keyKeyStoreFile
-            storePassword keyKeyStorePassword
-            keyAlias keyKeyAlias
-            keyPassword keyKeyAliasPassword
-        }
-    }
+    //signingConfigs {
+    //    debug {
+    //        storeFile keyKeyStoreFile
+    //        storePassword keyKeyStorePassword
+    //        keyAlias keyKeyAlias
+    //        keyPassword keyKeyAliasPassword
+    //    }
+    //}
     namespace 'com.wtbruh.fakelauncher'
     compileSdk 35
 
